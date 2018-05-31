@@ -11,9 +11,8 @@ p6=[ 1; 1;-1];
 p7=[ 1;-1; 1];
 p8=[ 1; 1; 1];
 
-theta=1;
 
-%rotation amount for each axis
+%rotation amount for each axis by simulation step (degrees)
 x=1
 y=.2
 z=.5
@@ -22,12 +21,14 @@ z=.5
 while(1)
     
 %rotation matrices for each axis
-rotation1=[1 0 0;0 cosd(theta*x) sind(theta*x); 0 -sind(theta*x) cosd(theta*x)];
-rotation2=[cosd(theta*y) 0 sind(theta*y); 0 1 0; -sind(theta*y) 0 cosd(theta*y)];
-rotation3=[cosd(theta*z) -sind(theta*z) 0; sind(theta*z) cosd(theta*z) 0; 0 0 1];
+rotation1=[1 0 0;0 cosd(x) sind(x); 0 -sind(x) cosd(x)];
+rotation2=[cosd(y) 0 sind(y); 0 1 0; -sind(y) 0 cosd(y)];
+rotation3=[cosd(z) -sind(z) 0; sind(z) cosd(z) 0; 0 0 1];
 
+%combine rotation matrices
 rotation=rotation1*rotation2*rotation3;
 
+%apply rotation matrices on points
 p1=rotation*p1;
 p2=rotation*p2;
 p3=rotation*p3;
