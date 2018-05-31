@@ -1,7 +1,7 @@
 clear all;
 clf;
 
-
+%8 points of the cube
 p1=[-1;-1;-1];
 p2=[-1; 1;-1];
 p3=[-1;-1; 1];
@@ -12,9 +12,8 @@ p7=[ 1;-1; 1];
 p8=[ 1; 1; 1];
 
 theta=1;
-turns=40;
 
-
+%rotation amount for each axis
 x=1
 y=.2
 z=.5
@@ -22,6 +21,7 @@ z=.5
 
 while(1)
     
+%rotation matrices for each axis
 rotation1=[1 0 0;0 cosd(theta*x) sind(theta*x); 0 -sind(theta*x) cosd(theta*x)];
 rotation2=[cosd(theta*y) 0 sind(theta*y); 0 1 0; -sind(theta*y) 0 cosd(theta*y)];
 rotation3=[cosd(theta*z) -sind(theta*z) 0; sind(theta*z) cosd(theta*z) 0; 0 0 1];
@@ -37,6 +37,7 @@ p6=rotation*p6;
 p7=rotation*p7;
 p8=rotation*p8;
 
+%plot using patch
 v = [p1(1:2).';p2(1:2).';p3(1:2).';p4(1:2).';p5(1:2).';p6(1:2).';p7(1:2).';p8(1:2).']
 f = [3 4 8 7;1 2 6 5;1 2 4 3;5 6 8 7;4 2 6 8;3 1 5 7];
 axis([-2 2 -2 2]);
