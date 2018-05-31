@@ -25,7 +25,7 @@ clf;
  q4=2;
  
  
- while(disp4x<=1 && disp4y<=1 && disp4x>=-1 && disp4y>=-1) %simulation stops when out of plot
+ while(disp4x<=1 && disp4y<=1 && disp4x>=-1 && disp4y>=-1) %simulation stops when charge 4 is out of the plot
  
  %to calculate the distance between charge and vector field grid (squared)
  r0=((((x-disp0x).^(2))+((y-disp0y).^(2))));
@@ -51,7 +51,6 @@ clf;
  %fix division  by zero
  VectorX(~isfinite(VectorX))=0;
  VectorY(~isfinite(VectorY))=0;
- 
  
  %fix strange rounding errors
  VectorX(VectorX > 100000000) = 0;
