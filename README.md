@@ -1,7 +1,7 @@
 # Matlab-experiments
 Small matlab programs
 
-**patch3d**: A 3d cube using the "patch" plot type
+**patch3d**: A rotating 3d cube using the "patch" plot type
 
 ![screenshot](./patch3d_screenshot.png)
 
