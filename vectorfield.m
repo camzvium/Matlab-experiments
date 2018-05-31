@@ -20,7 +20,7 @@ clf;
  %value of the charges
  q0=0.8;
  q1=1.5;
- q2=1.3;
+ q2=-1.3;
  q3=0.6;
  q4=2;
  
