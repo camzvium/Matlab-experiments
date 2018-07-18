@@ -14,7 +14,7 @@ clf;
  
  %Coulomb's law is inversely proportional to the square of the distance, but that is not good for visualisations
  %(scaling issues)
- %the distance (r) is already squared, so the real exponant is 2*exp
+ %the distance (r) is already squared, so the real exponent is 2*exp
  exp=-0.01;
  
  %value of the charges
